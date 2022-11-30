@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "rhfhf",
+      "content": "shshs\n",
+      "id": 1
+    },
+    {
+      "title": "eeridiiddh",
+      "content": "jajajasbdc",
+      "id": 4
+    },
+    {
+      "title": "debugging",
+      "content": "Testd",
+      "id": 5
+    },
+    {
+      "title": "Second",
+      "content": "dggdgd",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "name": "Fresh",
+      "comment": "dgdgdgdgbsbsajajajjajaj",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
