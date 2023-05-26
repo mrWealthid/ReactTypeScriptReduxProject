@@ -60,17 +60,17 @@ const Reservation = () => {
   //   );
   // }
 
-  function handleDetails(id: number) {
-    navigate(`/admin/reservation/${id}`);
-  }
+  // function handleDetails(id: number) {
+  //   navigate(`/admin/reservation/${id}`);
+  // }
 
   function Table({
     id,
     name,
     price,
-    date,
+
     status,
-    action,
+
     guest,
     checkin,
     checkout,
@@ -340,7 +340,7 @@ const Reservation = () => {
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col mt-4 gap-8">
       <p className="text-lg font-bold">Reservations</p>
 
       <section className="flex gap-10">

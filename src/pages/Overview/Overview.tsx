@@ -155,8 +155,8 @@ const Cards = ({
   statusTwo = "Inactive",
 }) => {
   return (
-    <div className={`card  ${bgTwo} flex gap-3`}>
-      <section className="flex flex-col gap-8 ">
+    <div className={`card  ${bgTwo} flex-1 flex gap-3`}>
+      <section className="flex  flex-col mt-4 gap-8 ">
         <section
           className={` ${
             /bg-white/.test(bgTwo) ? "text-black" : "text-white"

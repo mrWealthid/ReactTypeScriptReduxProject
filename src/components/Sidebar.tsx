@@ -1,55 +1,64 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import Logo from './common/Logo';
+import OverviewIcon from '../assets/Admin/Overviews.svg';
+import UserMgtIcon from '../assets/Admin/UserMgt.svg';
+import ReservationIcon from '../assets/Admin/Reservation.svg';
+import VerificationIcon from '../assets/Admin/Verification.svg';
 
 export const Sidebar = () => {
   function addStyle(val: string) {
     if (val) {
       return {
-        color: "white",
-        background: "#ff931f",
-        textDecoration: "none",
-        display: "block",
-        padding: "10px",
-        borderRadius: "10px",
+        color: 'white',
+        background: '#F48220',
+        textDecoration: 'none',
+
+        padding: '10px 15px',
+        borderRadius: '10px',
       };
     }
     return {
-      color: "#545e6f",
-      background: "inherit",
-      textDecoration: "none",
-      display: "block",
-      padding: "10px",
+      color: '#545e6f',
+      background: 'inherit',
+      textDecoration: 'none',
+
+      padding: '10px 15px',
     };
   }
 
   const routes = [
     {
-      path: "",
-      text: "Overview",
+      path: '',
+      text: 'Overview',
+      icon: OverviewIcon,
     },
-    { path: "user", text: "User Management" },
-    { path: "verification", text: "Verification" },
-    { path: "reservation", text: "Reservation" },
+    { path: 'user', text: 'User Management', icon: UserMgtIcon },
+    { path: 'verification', text: 'Verification', icon: VerificationIcon },
+    { path: 'reservation', text: 'Reservation', icon: ReservationIcon },
   ];
 
   return (
-    <div className="flex flex-col  w-1/4 gap-22 bg-gray-900 text-white py-8">
-      {/* <h2 className="p-4 text-center text-lg">Admin Dashboard</h2> */}
-      <section className="flex flex-col bg-inherit  mt-10 px-2">
-        {routes.map((route, index) => (
-          <NavLink
-            style={({ isActive }: any) => addStyle(isActive)}
-            to={route.path}
-            key={route.text}
-            end={index === 0 && true}
-            className={
-              "hover:translate-x-1 text-sm transition-all duration-500"
-            }
-          >
-            {route.text}{" "}
-          </NavLink>
-        ))}
-      </section>
-    </div>
+      <div className="flex flex-col  w-1/4 gap-22 bg-gray-900 text-white py-8">
+        <Link className="flex justify-center space-x-4 text-white" to="/">
+          <Logo />
+        </Link>
+        <section className="flex flex-col bg-inherit  mt-10 px-2">
+          {routes.map((route, index) => (
+              <NavLink
+                  style={({ isActive }: any) => addStyle(isActive)}
+                  to={route.path}
+                  key={route.text}
+                  end={index === 0 && true}
+                  className={
+                    'hover:translate-x-1 text-sm transition-all duration-500 flex items-center gap-2'
+                  }
+              >
+                <img src={route.icon} alt={route.text} />
+                {route.text}
+              </NavLink>
+          ))}
+        </section>
+      </div>
   );
 };

@@ -626,7 +626,7 @@ export const Verification = () => {
     { path: "/admin/verification/workspaces", text: "Workspaces" },
   ];
   return (
-    <section className="flex flex-col gap-8">
+    <section className="flex flex-col mt-4 gap-8">
       <section className="flex gap-3 items-center">
         {routes.map((route, index) => (
           <NavLink

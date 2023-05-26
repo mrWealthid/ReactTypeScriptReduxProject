@@ -1,7 +1,7 @@
 import React from "react";
 // import axios from "axios";
-import { Link, Outlet } from "react-router-dom";
-import { Navbar, Sidebar } from "../components/index";
+import {  Outlet } from "react-router-dom";
+import { Navbar, Sidebar } from "../components";
 
 export const SharedLayout = () => {
   //   useEffect(() => {
@@ -29,10 +29,10 @@ export const SharedLayout = () => {
       <main className="flex min-h-screen ">
         {/* <SmSidebar/> */}
         <Sidebar />
-        <div className="flex  flex-col bg-white w-screen">
+        <div className="flex flex-col bg-white w-screen">
           <Navbar />
 
-          <div className="bg-gray-100 flex-col flex px-4 min-h-screen">
+          <div className="bg-gray-100 flex-col flex px-4 mt-2 min-h-screen">
             <Outlet />
           </div>
         </div>
